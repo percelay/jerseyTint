@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import Gallery from "@/components/Gallery";
 import Benefits from "@/components/Benefits";
 import About from "@/components/About";
 import ServiceArea from "@/components/ServiceArea";
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
+        <Gallery />
         <Benefits />
         <About />
         <ServiceArea />

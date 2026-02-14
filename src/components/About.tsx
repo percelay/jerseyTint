@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -74,22 +75,13 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7 }}
           >
-            {/* ============================================= */}
-            {/* IMAGE PLACEHOLDER: About / Team Section        */}
-            {/* Recommended: Photo of the installation team,   */}
-            {/* or a professional tinting job in progress       */}
-            {/* Dimensions: 600x700                            */}
-            {/* ============================================= */}
-            <div className="bg-gradient-to-br from-ocean-100 to-slate-100 h-96 lg:h-[500px] w-full rounded-2xl flex items-center justify-center shadow-lg">
-              <div className="text-center p-8">
-                <CheckCircle2 className="w-16 h-16 text-ocean-400 mx-auto mb-4" />
-                <p className="text-ocean-600 font-medium">
-                  Image Placeholder: About Section
-                </p>
-                <p className="text-ocean-400 text-sm mt-1">
-                  Team photo or professional installation in progress
-                </p>
-              </div>
+            <div className="relative h-96 lg:h-[500px] w-full rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/gallery-15.jpg"
+                alt="Professional window tinting installation on a conservatory"
+                fill
+                className="object-cover"
+              />
             </div>
           </motion.div>
         </div>

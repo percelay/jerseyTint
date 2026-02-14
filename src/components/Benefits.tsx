@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ShieldCheck, Sun, Landmark, BadgePercent } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -58,22 +59,13 @@ export default function Benefits() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7 }}
           >
-            {/* ============================================= */}
-            {/* IMAGE PLACEHOLDER: Benefits Section            */}
-            {/* Recommended: Interior shot showing sunlight    */}
-            {/* through tinted windows, or before/after        */}
-            {/* Dimensions: 600x800                            */}
-            {/* ============================================= */}
-            <div className="bg-gradient-to-br from-ocean-200 to-ocean-100 h-96 lg:h-[500px] w-full rounded-2xl flex items-center justify-center shadow-lg">
-              <div className="text-center p-8">
-                <Sun className="w-16 h-16 text-ocean-400 mx-auto mb-4" />
-                <p className="text-ocean-600 font-medium">
-                  Image Placeholder: Benefits Section
-                </p>
-                <p className="text-ocean-400 text-sm mt-1">
-                  Interior with tinted windows showing UV protection
-                </p>
-              </div>
+            <div className="relative h-96 lg:h-[500px] w-full rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/gallery-1.jpg"
+                alt="Interior dining room with tinted windows overlooking the ocean"
+                fill
+                className="object-cover"
+              />
             </div>
           </motion.div>
 

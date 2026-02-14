@@ -1,22 +1,23 @@
 "use client";
 
+import Image from "next/image";
 import { Phone, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
     <section id="hero" className="relative min-h-[90vh] flex items-center pt-20">
-      {/* Background Image Placeholder */}
-      <div className="absolute inset-0 bg-gradient-to-br from-ocean-900 via-ocean-800 to-slate-900">
-        {/* ============================================= */}
-        {/* IMAGE PLACEHOLDER: Hero Background            */}
-        {/* Recommended: Wide shot of a coastal home with */}
-        {/* tinted windows, or Jersey Shore beachfront     */}
-        {/* Dimensions: 1920x1080 minimum                  */}
-        {/* Replace this div with <Image> component        */}
-        {/* ============================================= */}
-        <div className="absolute inset-0 bg-[url('/placeholder-hero.jpg')] bg-cover bg-center opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/80 via-ocean-900/40 to-transparent" />
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero.jpeg"
+          alt="Aerial view of the Jersey Shore coastline"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-ocean-950/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/80 via-ocean-900/30 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">

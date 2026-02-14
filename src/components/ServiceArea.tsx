@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -33,10 +34,16 @@ const itemVariants = {
 
 export default function ServiceArea() {
   return (
-    <section id="service-areas" className="py-20 lg:py-28 bg-ocean-900 relative overflow-hidden">
-      {/* Background texture */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
+    <section id="service-areas" className="py-20 lg:py-28 relative overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/beach-sunset.jpeg"
+          alt="Jersey Shore beachfront homes at sunset"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-ocean-950/80" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
