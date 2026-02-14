@@ -1,4 +1,5 @@
 import { Phone, MapPin, Facebook, Instagram } from "lucide-react";
+import Logo from "./Logo";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,10 +10,8 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-ocean-700 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">JS</span>
-              </div>
+            <div className="flex items-center gap-3 mb-4">
+              <Logo size="sm" />
               <div className="leading-tight">
                 <span className="block text-base font-bold text-white">
                   Jersey Shore
